@@ -1,0 +1,201 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SunLight | Online store </title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+</head>
+
+<body>
+
+    <div class="header">
+    <div class="container">
+        <div class="navbar">
+        <div class="sunlight">
+            <img class="img-sunlight" src="img/sunlight.jpg">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Account</a></li>
+                <h3><i class="fa fa-shopping-cart"></i></h3>
+            </ul>
+        </nav>
+        </div>
+    </div>    
+
+        <div class="row">
+            <div class="col-2">
+                <h1>Give Your Outfit<br> A New Style!</h1>
+                <p style="font-size:20px;">Style is something each of us already has, all we need to do is find it.</p>
+                <a href="" class="btn">Explore Now &#10137;</a>
+        </div> 
+        
+        <div class="form">
+            <h2>Login Here</h2>
+            <input type="email" name="email" placeholder="Enter Email Here">
+            <input type="password" name="" placeholder="Enter Password Here">
+            <button class="btnn"><a href="#">Login</a></button>
+            <p1 class="link">Don't have an account<br>
+            <a href="#">Sign up here</a></p1>
+            
+        </div>
+        </div>
+    </div>  
+
+    
+    <h4 class="title">Men Featured Products</h4>
+
+<section>
+    
+        <div>
+            <img src="img/product1.jpg">
+                <p>Ocean Blue T-Shirt</p>
+                    <h6>$50.00</h6>
+                    <span></span>
+                    <button>Add-Cart</button>
+        </div>
+        <div>
+            <img src="img/product2.jpg">
+                <p>Black Leather Shoes</p>
+                    <h6>$200.00</h6>
+                    <span></span>
+                    <button>Add-Cart</button>
+        </div>
+        <div>
+            <img src="img/product3.jpg">
+                <p>Desert T-Shirt</p>
+                    <h6>$50.00</h6>
+                    <span></span>
+                    <button>Add-Cart</button>
+        </div>
+        <div>
+            <img src="img/product4.jpg">
+                <p>Plaid Pocket Pant</p>
+                    <h6>$90.00</h6>
+                    <span></span>
+                    <button>Add-Cart</button>
+        </div>
+
+    
+
+</section>
+<section>
+    
+        <div>
+            <img src="img/product5.jpg">
+                <p>Light Gray Sweater</p>
+                    <h6>$80.00</h6>
+                    <span></span>
+                    <button>Add-Cart</button>
+        </div>
+        <div>
+            <img src="img/product6.jpg">
+                <p>Olive Green Jacket</p>
+                    <h6>$100.00</h6>
+                    <span></span>
+                    <button>Add-Cart</button>
+        </div>
+        <div>
+            <img src="img/product7.jpg">
+                <p>Black/Gray Jacket</p>
+                    <h6>$90.00</h6>
+                    <span></span>
+                    <button>Add-Cart</button>
+        </div>
+        <div>
+            <img src="img/product8.jpg">
+                <p>Black Short</p>
+                    <h6>$40.00</h6>
+                    <span></span>
+                    <button>Add-Cart</button>
+        </div>
+        
+</section>
+    
+    <h4 class="title">Women Featured Products</h4>
+
+<section>
+    
+        <div>
+            <img src="img/product9.jpg">
+                <p>Green Joggers</p>
+                    <h6>$60.00</h6>
+                    <span></span>
+                    <button>Add-Cart</button>
+        </div>
+        <div>
+            <img src="img/product10.jpg">
+                <p>Short</p>
+                    <h6>$50.00</h6>
+                    <span></span>
+                    <button>Add-Cart</button>
+        </div>
+        <div>
+            <img src="img/product11.jpg">
+                <p>Merci T-Shirt</p>
+                    <h6>$50.00</h6>
+                    <span></span>
+                    <button>Add-Cart</button>
+        </div>
+        <div>
+            <img src="img/product12.jpg">
+                <p>Gray Shoes</p>
+                    <h6>$180.00</h6>
+                    <span></span>
+                    <button>Add-Cart</button>
+        </div>
+        
+</section>   
+
+
+    <div class="select">  
+    </div>
+
+</body>
+</html>
+
+
+
+    <script type="text/javascript">
+        var noti = document.querySelector('h3');
+    var select = document.querySelector('.select');
+    var button = document.getElementsByTagName('button');
+    for(var but of button){
+        but.addEventListener('click', (e)=>{
+            var add = Number(noti.getAttribute('data-count') || 0);
+            noti.setAttribute('data-count', add +1);
+            noti.classList.add('zero')
+
+            // image --animation to cart ---//
+            var image = e.target.parentNode.querySelector('img');
+            var span = e.target.parentNode.querySelector('span');
+            var s_image = image.cloneNode(false);
+            span.appendChild(s_image);
+            span.classList.add("active");
+            setTimeout(()=>{
+                span.classList.remove("active");
+                span.removeChild(s_image);
+            }, 500); 
+            
+
+            // copy and paste //
+            var parent = e.target.parentNode;
+            var clone = parent.cloneNode(true);
+            select.appendChild(clone);
+            clone.lastElementChild.innerText = "Buy-now";
+            
+            if (clone) {
+                noti.onclick = ()=>{
+                    select.classList.toggle('display');
+                }   
+            }
+        })
+    } 
+
+    </script>    
+    
