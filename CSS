@@ -1,0 +1,332 @@
+    @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    *{
+        margin: 0;
+        padding: 0;
+        color: #454545;
+    }
+    
+
+    h3{
+        width: 3%;
+        position: relative;
+        top: 60px;
+        left: 90%;
+        cursor: pointer;
+    }
+    h3:before{
+        content: attr(data-count);
+        color: white;
+        position: absolute;
+        right: 16px;
+        font-size: 15px;
+        text-align: center;
+        top: -12px;
+        width: 20px;
+        height: 20px;
+        background: red;
+        border-radius: 50%;
+        opacity: 0;
+    }
+    h3.zero:before{
+        opacity: 1;
+    }
+        section{
+            margin: 100px auto;
+            width: 90%;
+            height: 400px;
+            display: flex;
+            justify-content: space-around;
+        }
+        section div{
+            width: 22%;
+            height: 93%;
+            background:#f5f5f5;
+            padding: 1%;
+            position: relative;
+        }
+        img{
+            width: 300px;
+            height: 260px;
+        }
+
+        p{
+            margin: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        h6{
+            width: 50px;
+            padding: 5px;
+            margin: 10px;
+            font-size: 15px;
+        }
+        button{
+            padding: 5px;
+            background: #098D9C;
+            border: none;
+            outline: none;
+            font-weight: bold;
+            color: #fafafa;
+            cursor: pointer;
+        }
+        section div span{
+            position: absolute;
+            top: 14px;
+            left: 13px;
+            background: red;
+            width: 300px;
+            height: 186px;
+            display: none;
+        }
+        section div span img{
+            width: 100%;
+            height: 100%;
+        }
+        section div:nth-child(1)>span.active{
+            animation: first 0.5s ease-in;
+            z-index: 2;
+            display: block;
+
+        }
+        section div:nth-child(2)>span.active{
+            animation: second 0.5s ease-in;
+            z-index: 2;
+            display: block;
+
+        }
+        section div:nth-child(3)>span.active{
+            animation: third 0.5s ease-in;
+            z-index: 2;
+            display: block;
+
+        }
+        section div:nth-child(4)>span.active{
+            animation: four 0.5s ease-in;
+            z-index: 2;
+            display: block;
+
+        }
+        @keyframes first{
+            to{
+                width: 30px;
+                height: 20px;
+                left: 1290px;
+                top: -70px;
+            }
+        }
+        @keyframes second{
+            to{
+                width: 30px;
+                height: 20px;
+                left: 948px;
+                top: -70px;
+            }
+        }
+        @keyframes third{
+            to{
+                width: 30px;
+                height: 20px;
+                left: 606px;
+                top: -70px;
+            }
+        }
+        @keyframes four{
+            to{
+                width: 30px;
+                height: 20px;
+                left: 265px;
+                top: -70px;
+            }
+        }
+        .select{
+            width: 60%;
+            height: 580px;
+            padding: 5%;
+            background: #222;
+            position: absolute;
+            top: -1000px;
+            left: 20%;
+            transition: 0.5s;
+            overflow-y: auto;
+            margin: auto;
+        }
+        .select.display{
+            top: 10px;
+        }
+        .select div{
+            width: 100%;
+            height: 200px;
+            display: flex;
+            padding: 5px;
+            border: 1px solid white;
+            position: relative;
+            margin: 5px auto;
+        }
+        .select div img{
+            width: 300px;
+            height: 100%;
+        }
+        .select div p{
+            padding: 35px;
+            color: white;
+        }
+        .select div h6,
+        .select div button{
+            position: absolute;
+            left: 45%;
+            top: 50%;
+            color: white;
+        }
+        .select div button{
+            left: 60%;
+            top: 55%;
+        }
+        .select div span{
+            display: none;
+        }
+        h4{
+            text-align: center;
+        }
+        .navbar{
+            display: flex;
+            align-items: center;
+            padding: 10px;
+
+        }
+        nav{
+            flex: 1;
+            text-align: right;
+        }
+        nav ul{
+            display: inline-block;
+            list-style-type: none;
+        }
+        nav ul li{
+            display: inline-block;
+            margin-right: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: #555;
+        }
+        .container{
+            max-width: 1300px;
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        .row{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .col-2{
+            max-width: 100%;
+            padding: 50px 0;
+        }
+        .col-2 h1{
+            font-size: 50px;
+            line-height: 60px;
+            margin: 25px 0;
+        }
+        .btn{
+            display: inline-block;
+            background: #098D9C;
+            color: #fff;
+            padding: 8px 30px;
+            margin: 30px 0;
+            border-radius: 30px;
+        }
+        .form{
+            width: 250px;
+            height: 380px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+            transform: translate(0%,-5%);
+            border-radius: 10px;
+            padding: 25px;
+        }
+        .form input:focus{
+            outline: none;
+        }
+        ::placeholder{
+            color: #fff;
+            font-family: Arial;
+        }
+        .form h2{
+            width: 220px;
+            font-family: sans-serif;
+            text-align: center;
+            color: #098D9C;
+            font-size: 22px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 2px; 
+            padding: 8px; 
+        }
+        .form input{
+            width: 240px;
+            height: 35px;
+            background: transparent;
+            border-bottom: 1px solid #098D9C;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            color: #fff;
+            font-size: 15px;
+            letter-spacing: 1px;
+            margin-top: 30px;
+            font-family: sans-serif;
+        }
+        .btnn{
+            width: 240px;
+            height: 40px;
+            background: #098D9C;
+            border: none;
+            margin-top: 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #fff;
+            transition: 0.4s ease;
+        }
+        .btnn:hover{
+            background: #fff;
+            color: #098D9C;
+        }
+        .btnn a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .form .link{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            padding-top: 50px;
+            text-align: center;
+            color: white;
+        }
+        .form .link a{
+            text-decoration: none;
+            color: #098D9C;
+        }
+        .title{
+            text-align: center;
+            margin: 0 auto 80px;
+            position: relative;
+            line-height: 60px;
+            color: #555;
+            font-size: 30px;
+        }
+        .title::after{
+            content: '';
+            background: #098D9C;
+            width: 80px;
+            height: 5px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
