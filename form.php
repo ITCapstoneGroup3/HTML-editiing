@@ -152,12 +152,7 @@ form .user-details .input-box{
 </head>  
 <body>  
 
-<?php
-   require '/path/to/vendor/autoload.php';
 
-   use Aws\S3\S3Client;
-   use Aws\Exception\AwsException;
-?>
 
 <div class="container">
     <div class="title">Create an account</div>
@@ -166,19 +161,15 @@ form .user-details .input-box{
         <div class="user-details">
           <div class="input-box">
             <span class="details">First Name</span>
-            <input type="text" placeholder="Enter your first name" required>
+            <input type="text" name="first_name" placeholder="Enter your first name" required>
           </div>
           <div class="input-box">
             <span class="details">Last Name</span>
-            <input type="text" placeholder="Enter your last name" required>
+            <input type="text" name="last_name" placeholder="Enter your last name" required>
           </div>
           <div class="input-box">
             <span class="details">Username</span>
             <input type="text" placeholder="Enter your username" required>
-          </div>
-          <div class="input-box">
-            <span class="details">Full Name</span>
-            <input type="text" placeholder="Enter your name" required>
           </div>
           <div class="input-box">
             <span class="details">Email</span>
