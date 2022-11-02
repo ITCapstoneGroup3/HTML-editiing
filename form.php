@@ -11,7 +11,19 @@
 </head>  
 <body>  
 
-  <?php
+<?php
+  require 'vendor/autoload.php';
+
+  use Aws\S3\S3Client;
+  use Aws\Exception\AwsException;
+  
+  //Create an S3Client
+  $s3 = new Aws\S3\S3Client([
+    'version' => 'latest',
+    'region' => 'us-east-1'
+  ]);
+
+
   $conn = mysqli_connect("dbuno.culbmfqkukyt.us-east-1.rds.amazonaws.com", "admin", "ITgroup3!", "dbuno");
    
   // Check connection
@@ -43,7 +55,7 @@
    
   // Close connection
   mysqli_close($conn);
-  ?>
+?>
 
 <div class="container">
     <div class="title">Create an account</div>
