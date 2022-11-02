@@ -22,7 +22,7 @@
   // Taking all 5 values from the form data(input)
   $email = $_REQUEST['email'];
   $user_name = $_REQUEST['user_name'];
-  $user_name = $_REQUEST['password'];
+  $password = $_REQUEST['password'];
    
   // Performing insert query execution
   // here our table name is college
