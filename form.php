@@ -58,7 +58,7 @@ if (strlen($user) || strlen($email) || strlen($pw)) {
       </form>
     </div>
   </div>
-<?php
+  <?php
 
 $result = mysqli_query($connection, "SELECT * FROM userbase");
 
@@ -83,6 +83,12 @@ while($query_data = mysqli_fetch_row($result)) {
 
 ?>
 
+<?php
+
+  mysqli_free_result($result);
+  mysqli_close($connection);
+
+?>
 </body>
 </html>
 
@@ -126,4 +132,4 @@ function TableExists($tableName, $connection, $dbName) {
 
   return false;
 }
-?>                   
+?>
