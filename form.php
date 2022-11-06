@@ -21,7 +21,7 @@ $database = mysqli_select_db($connection, DB_DATABASE);
 /* Ensure that the EMPLOYEES table exists. */
 VerifyTable($connection, DB_DATABASE);
 
-/* If input fields are populated, add a row to the EMPLOYEES table. */
+/* If input fields are populated, add a row to the table. */
 $user = htmlentities($_POST['user_name']);
 $email = htmlentities($_POST['email']);
 $pw = htmlentities($_POST['password']);
@@ -58,7 +58,7 @@ if (strlen($user) || strlen($email) || strlen($pw)) {
       </form>
     </div>
   </div>
-  <?php
+<?php
 
 $result = mysqli_query($connection, "SELECT * FROM userbase");
 
@@ -83,12 +83,6 @@ while($query_data = mysqli_fetch_row($result)) {
 
 ?>
 
-<?php
-
-  mysqli_free_result($result);
-  mysqli_close($connection);
-
-?>
 </body>
 </html>
 
